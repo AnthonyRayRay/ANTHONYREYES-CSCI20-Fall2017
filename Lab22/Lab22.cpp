@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib> //header used for  random number generaters
-#include <ctime> 
+#include <ctime> //header is used for the value pointed as time
 using namespace std;
 
 void number1 (); // when we place void down this means that there is no return type or number
@@ -14,7 +14,7 @@ int main()
 
 void number1 () 
 {
-    srand(time(0));//turns a random integer each time the function is called, in the range 0 to randomNumber.
+    srand((0));//turns a random integer each time the function is called, in the range 0 to randomNumber, seeds random generator.
     int randomNumber = rand() % (1 + 100);  // My specific range of what number I am wanting. In this case we are wanting the random number to be bewteen 1-100 and also 1 and 100 if possible.
 
     int userNumber = 0;
