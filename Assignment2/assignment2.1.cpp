@@ -26,30 +26,33 @@ void price:: print(){ // starting my gets and sets
     cout << " \nState Price: "<<  << _statePrice << 
     "\nCounty Price: " << _countyPrice <<
     "\nCity Price: " << _cityPrice <<
-    "\nPrice Special: " << _priceSpecial << endl;
+    "\nPrice Special: " << _priceSpecial << 
+    "\nTotal: " << fixed << setprecision(2) <<
+    ((_stateprice + _countyprice + _cityprice + _pricespecial)) * amount) + amount << endl << endle;
     
 }
-void Price:: SetStatePrice (double statePrice){ 
+void price:: SetStatePrice (double statePrice){ 
 _statePrice = statePrice;
 }
 
-void Price:: setCountyPrice (double countyPrice){
+void price:: setCountyPrice (double countyPrice){
 _countyPrice = countyPrice;
 }
 
-void Price:: setCityPrice ( double cityPrice){
+void price:: setCityPrice ( double cityPrice){
 _cityPrice = countyPrice;
 }
 
-void Price:: setPriceSpecial ( double priceSpecial){
+void price:: setPriceSpecial ( double priceSpecial){
 _pricespecial = priceSpecial;
 
 }
 
 int main() {
-    Price price1, price2, price3, price4, price5;  
+    price price1, price2, price3, price4, price5; 
+    double amount = 0.0;
     
-    price1.setStatePrice ( 0.06 );
+    price1.setStatePrice ( 0.06 ); //chico
     price1.setCountyPrice ( 0.0025 );
     price1.setCityPrice ( 0.00 );
     price1.setPriceSpecial ( 0.01 );
@@ -84,8 +87,32 @@ int main() {
     
     price5.print()
     
-   cout << "\nEnter an amount: "; // user input amount
-   cin >> amount;
+    //loop 10 times
+    for (int i=0; i<10; i++) {
+    cout << "\nEnter an amount: ";
+    cin >> amount;
+    
+    //output each amount now
+    cout << "Price Chico California: ";
+    cout << " ======================";
+    price1.print(amount);
+    
+    cout << "Price Paradise California: ";
+    cout << "============================";
+    price2.print(amount);
+    
+    cout << "Price Sacramento California";
+    cout << "===========================";
+    price3.print(amount);
+    
+    cout << "Price Las Vegas Neveda";
+    cout << " =====================";
+    price4.print(amount);
+    
+    cout << "Price Pheonix Arizona";
+    cout << "======================";
+    price4.print(amount);
+    }
 
  
    return 0;}
