@@ -31,10 +31,4 @@ void swapNumbers (int &a, int &b) { // swapping values
    
 }
 
-int randomNumberGenerator(int min, int max) {
-    if (min > max) swapNumbers(min, max);
-    srand (time(NULL)); // wasn't generating with 0 and had to see about NULL to get that random number
-                        // too much on this part 
-    return rand()%(max-min +1) + min; //constant defined kinda confused about this from cplusplus
-                                      // So we can get the random number between the input placed in by the user
-}
+  
