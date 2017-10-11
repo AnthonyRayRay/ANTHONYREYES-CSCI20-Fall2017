@@ -1,9 +1,10 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-class price { //applying my private/public class
-    public :
-    void Print();
+class Price { //applying my private/public class
+    public:
+    void print();
     void setStatePrice (double statePrice);
     void setCountyPrice (double countyPrice); 
     void setCityPrice (double cityPrice);
@@ -14,7 +15,7 @@ class price { //applying my private/public class
     double getCityPrice();
     double getPriceSpecial();
     
-    private :
+    private:
     double _statePrice;
     double _countyPrice;
     double _cityPrice;
@@ -22,36 +23,53 @@ class price { //applying my private/public class
     
 };
 
-void price:: print(){ // starting my gets and sets
-    cout << " \nState Price: "<<  << _statePrice << 
+void Price::print() {
+    cout << "\nState Price: " << _statePrice << 
     "\nCounty Price: " << _countyPrice <<
     "\nCity Price: " << _cityPrice <<
     "\nPrice Special: " << _priceSpecial << 
     "\nTotal: " << fixed << setprecision(2) <<
-    ((_stateprice + _countyprice + _cityprice + _pricespecial)) * amount) + amount << endl << endle;
+    (( _statePrice + _countyPrice + _cityPrice + _pricespecial)) * amount) + amount << endl;
     
 }
-void price:: SetStatePrice (double statePrice){ 
+void Price:: SetStatePrice (double statePrice){ 
 _statePrice = statePrice;
 }
 
-void price:: setCountyPrice (double countyPrice){
+void Price:: setCountyPrice (double countyPrice){
 _countyPrice = countyPrice;
 }
 
-void price:: setCityPrice ( double cityPrice){
+void Price:: setCityPrice ( double cityPrice){
 _cityPrice = countyPrice;
 }
 
-void price:: setPriceSpecial ( double priceSpecial){
+void Price:: setPriceSpecial ( double priceSpecial){
 _pricespecial = priceSpecial;
 
 }
 
+double Price::getStatePrice() {
+    return _statePrice;
+}
+
+double Price::getCountyPrice(){
+    return _countyPrice;
+}
+
+double Price::getCityPrice(){
+    return _cityPrice;
+    
+}
+
+double Price::getPriceSpecial() {
+    return _pricespecial;
+}
 int main() {
-    price price1, price2, price3, price4, price5; 
+     price price1, price2, price3, price4, price5; 
     double amount = 0.0;
     
+    price1.print() ;
     price1.setStatePrice ( 0.06 ); //chico
     price1.setCountyPrice ( 0.0025 );
     price1.setCityPrice ( 0.00 );
