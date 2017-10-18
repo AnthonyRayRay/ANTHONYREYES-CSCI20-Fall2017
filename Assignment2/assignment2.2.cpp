@@ -4,29 +4,25 @@ using namespace std;
 
 class Price { // setting up my classes
   public:
-    void print(double amount);
-    void setStatePrice(double statePrice); //LINES 8-11 MUTATORS
+    void print();
+    void seStatePrice(double statePrice); //LINES 8-11 MUTATORS
     void setCountyPrice(double countyPrice);
     void setCityPrice(double cityPrice);
     void setPriceSpecial(double priceSpecial);
     
-    
-    
-    double getStatePrice(); //LINES 13-16 ACCESSORS
+    double getSatePrice(); //LINES 13-16 ACCESSORS
     double getCountyPrice();
     double getCityPrice();
     double getPriceSpecial();
   
-    
   private:
     double _statePrice;
     double _countyPrice;
     double _cityPrice;
     double _priceSpecial;
-   
 };
 
-void Price::print(double amount) {  // having my outsputs for city, state, couty, specail 
+void Price::print(double amount)   // having my outsputs for city, state, couty, specail 
   cout << "\nState Price: " << _statePrice <<
    "\nCounty Price: " << _countyPrice <<
    "\nCity Price: " << _cityPrice <<
@@ -34,7 +30,6 @@ void Price::print(double amount) {  // having my outsputs for city, state, couty
    "\nTotal: " << fixed << setprecision(2) <<
    ((_statePrice + _countyPrice + _cityPrice + _priceSpecial) * amount) + amount <<
    endl << endl;
-   
  // my equation to get my total price.
  }
  
@@ -103,28 +98,28 @@ int main() {
     
     //I wanted to try a loop so this would be out of context of what was taught in the class as of now...
     for (int i=0;i<10;i++) {
-        cout << "\n Enter an amount: ";
-        cin >> amount;
+        cout << "\n Enter and amount: ";
+        cint >> amount;
         
     //outputting each amount
-    cout << "Price California, Butte County, Chico,:  ";
-    
+    cout << "Price 1: ";
+    cout << "===========";
     price1.print(amount);
     
-    cout << "Price California, Butte County, Paradise,: ";
-    
+    cout << "Price 2: ";
+    cout << "=============";
     price2.print(amount);
     
-    cout << "Price California, Sacramento County, Sacramento,: ";
+    cout << "Price 3: ";
+    cout << "=============";
+    prine3.print(amount);
     
-    price3.print(amount);
-    
-    cout << "Price: Nevada, Clark County, Las Vegas, : ";
-    
+    cout << "Price 4: ";
+    cout << "============";
     price4.print(amount);
     
-    cout << "Price Arizona, Maricopa County, Pheonix,: ";
-    
+    cout << "Price 5: ";
+    cout << "============";
     price5.print(amount);
     }
     
@@ -132,3 +127,4 @@ int main() {
     
 }
 
+}
