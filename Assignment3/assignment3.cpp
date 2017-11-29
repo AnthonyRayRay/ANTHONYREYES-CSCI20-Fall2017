@@ -42,7 +42,7 @@ int main() {
       if(diceRoll == 1) {
         player1->ResetScore();
       } else {
-        player1->SetScore(player1->GetScore() + diceRoll);
+        player1->SetScore(player1->GetScore() + diceRoll);git
       }
 
       sleep(1);
