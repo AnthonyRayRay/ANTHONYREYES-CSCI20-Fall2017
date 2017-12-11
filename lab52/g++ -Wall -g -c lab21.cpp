@@ -4,7 +4,7 @@
  *  file. It will set a member variable to 0 on initialization
  *  and output it using the Output() function.
  */
-class myClass {
+class MyClass { // not declared
  public:
   /*
    * Constructor
@@ -36,7 +36,7 @@ int MyClass::GetNumber(){
 }
 
 
-int randomNumber(){
+int randomNumber(){ //not declared
    srand(time(0));
    return (rand()% 10) + 1);
 }

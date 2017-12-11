@@ -5,23 +5,24 @@ using namespace std;
 
 int main() {
     int nameLength = 0;
-    char * name = new char[];// This is the pointer but shouldn't it be myPtr??
+    char * name = new char[];
 
-    cout << "Please enter a 10 letter word or less" << endl; // array next to this and new char
-    cin >> name; // needs to dereferenced because of the name being a pointer.
+    cout << "Please enter a 10 letter word or less" << endl; // Prompting for a 10 letter word or less.
+    cin >> name; // Storing the user input into the array 'name'.
 
-    char * head  = name; // Dereference Operator ?
-    char * tail = name; //  Dereference Operator ?
-    nameLength = strlen(*name);//IS THIS PART OF A C-STRING MODIFICATION FUNCTION?
+    char * head  = name; // Pointer variable to keep track of head.
+    char * tail = name; //  Pointer variable to keep track of tail.
+    nameLength = strlen(*name); // When using strlen the variable should be passed in normally
+    // Example: nameLength = strlen(name);
 
-    cout << "Your word is " << firststr << endl; // not the right variable
+    cout << "Your word is " << firststr << endl; // firststr is not defined.
 
-    if (nameLength<10) // Needs to be less than or equal too.
+    if (nameLength<10) // Needs to be less than 10.
     {
-         while (*head != '\0')
+         while (*head != '\0') // checking that head is not at the end.
          {
-                cout << *head;
-                head++;
+                cout << *head; // should just be cout << head;
+                head++; // Head should be reassigned to the next char in the array. (like a linked list)
          }
      }
      else
@@ -31,14 +32,14 @@ int main() {
 
      cout << endl;
 
-     tail = &name[strlen(name) - 1]; // reference operator
+     tail = &name[strlen(name) - 1]; // referencing a char in the name array.
 
-     if (nameLength < 10) // if statement
+     if (nameLength < 10) // checking that nameLength is less than 10.
      {
-          while (tail != name) // while statement
+          while (tail != name)
           {
-                 cout << *tail;
-                 tail--;
+                 cout << *tail; // should be cout << tail;
+                 tail--; // this should be reassigned to the previous.
           }
      }
      cout << endl;
