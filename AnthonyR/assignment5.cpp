@@ -1,3 +1,6 @@
+//Anthony Reyes
+// Assignment 5
+
 #include <iostream>
 #include <math.h>
 
