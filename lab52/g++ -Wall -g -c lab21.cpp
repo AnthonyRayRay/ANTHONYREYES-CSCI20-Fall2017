@@ -1,42 +1,45 @@
-/*
- *  This class is to show how to
- *  break our class into an interface and implementation
- *  file. It will set a member variable to 0 on initialization
- *  and output it using the Output() function.
- */
-class MyClass { // not declared
- public:
-  /*
-   * Constructor
-   * Initialize our member variable num_ to 0
-   */
-  MyClass();
-  /*
-   * Output our member variable using cout
-   */
-  void Output();
-  void SetNumber(int num);
-  int GetNumber();
- private:
-  int num_;
-};
+/ Program to store 10 integers array
 
-MyClass::MyClass() : num_(0) {}
+#include <iostream>
+#include <stdio.h>
 
-void MyClass::Output() {
-  cout << "My number is: " << num_ << endl;
+using namespace std;
+
+int getArray(int x[]);
+int reverseArray(int x[], int);
+
+int main ()
+{
+  int a[5];
+
+ 	int e = getArray(a);
+	int s = reverseArray(a,5);
+
+  return 0;
 }
 
-void MyClass::SetNumber(int num){
-   num_ = num;
+int getArray(int x[])
+{
+	int userInput;
+	
+	for (int count = 0; count < 5; count ++)
+	{
+		cout << "Please enter 5 numbers: ";
+		cin >> userInput;
+		
+		userInput = x[5];
+
+	}
+	
 }
 
-int MyClass::GetNumber(){
-   return num_;
-}
-
-
-int randomNumber(){ //not declared
-   srand(time(0));
-   return (rand()% 10) + 1);
+int reverseArray(int a[], int i )
+{
+	int n = 5;
+        cout << "The reverse order: " << endl;
+       
+        for(int i=n-1; i>=0; i--)
+        {
+            cout << a[i] << ' ';
+        }
 }
